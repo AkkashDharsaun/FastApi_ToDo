@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-
+from fastapi.middleware.cors import CORSMiddleware
 from .schemas import TodoCreate, TodoResponse
 from .database import Sessionlocal, Base, engine
 from .models import TodoModel
