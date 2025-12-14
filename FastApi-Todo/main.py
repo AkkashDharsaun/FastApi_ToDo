@@ -10,7 +10,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",   # local React
-        "https://fastapi-todo-ya2v.onrender.com" # deployed frontend
+        "https://fast-api-frontend-mxmy.vercel.app" # deployed frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],
