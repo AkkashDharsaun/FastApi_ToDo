@@ -6,6 +6,16 @@ from .database import Sessionlocal, Base, engine
 from .models import TodoModel
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",   # local React
+        "https://fastapi-todo-ya2v.onrender.com" # deployed frontend
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 Base.metadata.create_all(bind=engine)
 
